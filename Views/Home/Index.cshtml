@@ -1,0 +1,25 @@
+﻿@model List<MVCApplication.Models.Employee>
+<div class="row">
+    @{
+        foreach (var employee in Model)
+            {
+            <div class="col-3 m-2 bg-light">
+                <a asp-controller="Home" asp-action="EditEmployee" asp-route-id="@employee.Id" class="text-decoration-none text-body">
+                <div class="row ml-2 ">
+                    <div class="col-4">
+                       <img src="@Url.Content("~/Images/profile.jpg ")" class="w-100 p-0">
+                    </div>
+                    <div class="col-8">
+                         <div>@employee.Firstname @employee.Lastname</div>
+                          <div> @employee.Jobtitle</div>
+                          <div>@employee.Department</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            }
+    }
+    </div>
+
+
+

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "EditEmployee";
+}
+@model MVCApplication.Models.Employee
+
+
+<div>
+    @using (Html.BeginForm("EditEmployee", "Home", FormMethod.Post))
+    {
+            <table>
+                <tr>
+                    <th>Update Employee Details</th>
+                </tr>
+                <tr>
+                <td class="p-2">firstname</td>
+                <td><input type="text"  asp-for=Firstname value="@Model.Firstname" class="form-control"/></td>
+                </tr>
+                <tr>
+                <td class="p-2">Last Name</td>
+                <td><input type="text" asp-for=Lastname value="@Model.Lastname" class="form-control" /></td>
+                </tr>
+                <tr>
+                <td class="p-2">Job Title</td>
+                <td><input type="text" asp-for=Jobtitle value="@Model.Jobtitle" class="form-control" /></td>
+                </tr>
+                <tr>
+                <td class="p-2">Office</td>
+                <td><input type="text" asp-for=Office value="@Model.Office" class="form-control" /></td>
+                </tr>
+                <tr>
+                <td class="p-2">Department</td>
+                <td><input type="text" asp-for=Department value="@Model.Department" class="form-control" /></td>
+                </tr>
+                <tr>
+                <td class="p-2">Phone Number</td>
+                <td><input type="text" asp-for=Phonenumber value="@Model.Phonenumber" class="form-control" /></td>
+                </tr>
+                <tr>
+                <td class="p-2">Email</td>
+                <td><input type="text" asp-for=Email value="@Model.Email" class="form-control" /></td>
+                </tr>
+                <tr>
+                <td class="p-2">
+                       <input type="submit" class="btn btn-success" value="sumbit">
+                </td>
+                </tr>
+            </table>
+    }
+</div>
+

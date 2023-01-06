@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "AddEmployee";
+}
+@model MVCApplication.Models.Employee
+<div>
+    @using(Html.BeginForm("AddEmployee","Home",FormMethod.Post)){
+        <table>
+            <tr >
+                <th>Give Employee Details</th>
+            </tr>
+            <tr class="m-5 p-3">
+                <td class="p-3">firstname</td>
+                <td>@Html.TextBoxFor(m=>m.Firstname ,new { @class = "form-control" })</td>
+            </tr>
+            <tr>
+                <td class="p-3">Last Name</td>
+                <td>@Html.TextBoxFor(m=>m.Lastname,new { @class = "form-control" })</td>
+            </tr>
+            <tr>
+                <td class="p-3">Job Title</td>
+                <td>
+                    @Html.DropDownListFor(m => m.Jobtitle,
+                new SelectList(Enum.GetValues(typeof(JobList))),
+                "Select Job Title",new { @class="form-select" })
+                </td>
+            </tr>
+            <tr>
+                <td class="p-3">Office</td>
+                <td> @Html.DropDownListFor(m => m.Office,
+                new SelectList(Enum.GetValues(typeof(Seatle))),
+                "Select Office" ,new { @class="form-select" })
+                </td>
+                </tr>
+            <tr>
+                <td class="p-3">Department</td>
+                <td>
+                    @Html.DropDownListFor(m => m.Department,
+                new SelectList(Enum.GetValues(typeof(Department)),new { @class="form-select"}),
+                "Select Department",new { @class="form-select" })
+                </td>
+            </tr>
+            <tr>
+                <td class="p-3">Phone Number</td>
+                <td>@Html.TextBoxFor(m=>m.Phonenumber,new { @class = "form-control" })</td>
+            </tr>
+            <tr>
+                <td class="p-3">Email</td>
+                <td>@Html.TextBoxFor(m=>m.Email,new { @class = "form-control" })</td>
+            </tr>
+            <tr>
+                <td class="p-3">
+                   <input type="submit" value="sumbit" class="btn btn-success">
+               </td>
+            </tr>
+        </table>
+    }
+</div>
+

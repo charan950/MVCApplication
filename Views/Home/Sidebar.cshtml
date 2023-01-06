@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+{
+    <table>
+        <input name="value"  class="border-0 w-25 h6" value="Department"><br>
+        <button type="submit" class="border-0 bg-white" onclick="this.form.submit()" name="alpha" value="IT">IT(@ViewBag.Employeecount.It)</button>
+        <br>
+        <button type="submit" class="border-0 bg-white" onclick="this.form.submit()" name="alpha" value="HumanResources">Human Resources(@ViewBag.Employeecount.Hr)</button>
+                <br>
+        <button type="submit" class="border-0 bg-white" onclick="this.form.submit()" name="alpha" value="MD">Md(@ViewBag.Employeecount.Md)</button>
+                <br>
+        <button type="submit" name="search" id="search" class="border-0 bg-white " onclick="this.form.submit()" value="Sales">Sales(@ViewBag.Employeecount.Sales)</button>
+                <br>
+    </table>
+}
+@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+{
+    <table>
+        <input type="text" name="value"  class="border-0 w-25 h6 d-inline" value="Office"><br>
+        <button type="submit" class="border-0 bg-white " onclick="this.form.submit()" name="alpha" value="Seatle">Seatle(@ViewBag.Employeecount.Office)</button>
+        <br>
+        <button type="submit" name="alpha" id="search" class="border-0 bg-white " onclick="this.form.submit()" value="India">Inida(@ViewBag.Employeecount.India)</button>
+        <br>
+    </table>
+}
+@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+{
+    <table>
+        <input type="text" name="value" class="border-0 w-25 h6 d-inline" value="JobTitle">
+        <br>
+        <button type="submit" class="border-0 bg-white" onclick="this.form.submit()" name="alpha" value="sharepointhead">SharePoint Practice Head(@ViewBag.Employeecount.Sharepoint)</button>
+        <br>
+        <button type="submit" name="alpha" id="search" class="border-0 bg-white" onclick="this.form.submit()" value="Dotnet">.Net Developer(@ViewBag.Employeecount.Dotnet)</button>
+        <br>
+        <button type="submit" class="border-0 bg-white" onclick="this.form.submit()" name="alpha" value="RecrutingExpert">Recruting Expert(@ViewBag.Employeecount.RecruitingExpert)</button>
+        <br>
+        <button type="submit" name="alpha" id="search" class="border-0 bg-white" onclick="this.form.submit()" value="BIDeveloper">BI Developer(@ViewBag.Employeecount.BIDevelopers)</button>
+        <br>
+        <button type="submit" name="alpha" id="search" class="border-0 bg-white" onclick="this.form.submit()" value="BA">Bussiness Analyst(@ViewBag.Employeecount.BA)</button>
+        <br>
+    </table>
+}

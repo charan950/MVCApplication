@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+  @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+    {
+    @if (ViewBag.Search != null)
+    {
+        <table>
+            <div class="row m-0 p-0">
+                <div class="col-12 m-3 ms-0">
+                    <label>Search</label>
+                    <input type="text" name="search" class="form-control w-25 d-inline" value="@ViewBag.Search.Keyword"  onblur="this.form.submit()">
+                    Filter By
+                    <select class="border-1 form-select w-25 d-inline" name="value" value="@ViewBag.Search.FilterBy">
+                        @if (@ViewBag.Search.FilterBy==null){
+                            <option value="firstname">Firstname</option>
+                            <option value="lastname" >Lastname</option>
+                            <option value="jobtitle">Jobtitle</option>
+                            <option value="department" >Department</option>
+                            }
+                        else
+                        {
+                            <option selected>@ViewBag.Search.FilterBy</option>
+                            <option value="firstname">Firstname</option>
+                            <option value="lastname" >Lastname</option>
+                            <option value="jobtitle">Jobtitle</option>
+                            <option value="department" >Department</option>
+                        }
+                    </select>
+                    <a class="btn btn-success ms-1 me-3" asp-controller="Home" asp-action="Index">clear</a>
+                    <a asp-area="" asp-controller="Home" asp-action="AddEmployee" class="btn btn-primary align-content-center ms-5">Add Employee</a>
+                </div>
+                <div class="col-12 m-1 ms-0">
+                    <small> Note:Please use the advanced filter options to refine your results</small>
+                </div>
+                <div class="col-12 m-3 ms-0">
+                    @for (int i = 65; i < 91; i++)
+                    {
+                        <input type="submit" name="alpha" id="search" class="btn btn-primary m-1" onclick="this.form.submit()" value="@Convert.ToChar(i)">
+                    }
+                </div>
+                </div>
+               
+            </table>
+            }
+    }
