@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVCApplication.Models;
 using MVCApplication.Providers;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.Json;
 using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
@@ -94,7 +93,6 @@ namespace MVCApplication.Controllers
 
             string filterby = value;
             TempData["employees"] = JsonSerializer.Serialize(_employeeprovider.Search(keyword, filterby));
-            //TempData["keyword"] = keyword;
             TempData["value"] = value;
             return RedirectToAction("Index", "Home");
         }

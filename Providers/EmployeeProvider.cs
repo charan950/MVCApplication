@@ -9,8 +9,6 @@ namespace MVCApplication.Providers
     public class EmployeeProvider:PageModel
     {
         static string connectionstring = "data source =.; Initial Catalog = Employees; Integrated Security = SSPI;";
-        string Filterby = "firstname";
-        string alpha = "";
         public string SidebarValue = "";
         public List<Employee> GetEmployees()
         {
@@ -124,33 +122,5 @@ namespace MVCApplication.Providers
             }
             return employeecpount;
         }
-       
-        //public List<Employee>  SideFilter(string search)
-        //{
-            
-        //    this.SideBarValue(search);
-        //    var employees = new List<Employee>();
-        //    string filterby = search;
-        //    SqlConnection con = new SqlConnection(connectionstring);
-        //    string query = "Select * from Employees where department like '" + (filterby.ToLower()) + "%'" + " OR jobtitle  like '" + (filterby.ToLower()) + "%'" + " or office like '" + (filterby.ToLower()) + "%'";
-        //    SqlCommand cm = new SqlCommand(query, con);
-        //    DataSet dataset = new DataSet();
-        //    con.Open();
-        //    SqlDataReader sdr = cm.ExecuteReader();
-        //    while (sdr.Read())
-        //    {
-        //        employees.Add(new Employee((int)sdr["id"], sdr["firstname"].ToString(), sdr["lastname"].ToString(), sdr["jobtitle"].ToString(),
-        //            sdr["office"].ToString(), sdr["department"].ToString(), sdr["phonenumber"].ToString(), sdr["email"].ToString()));
-        //    }
-        //    return employees;
-        //}
-        //public void SideBarValue(string search)
-        //{
-        //    this.SidebarValue = search;
-        //}
-        //public string GetSideBarValue()
-        //{
-        //    return this.SidebarValue;
-        //}
     }
 }
