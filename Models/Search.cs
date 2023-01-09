@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
 
-namespace MVCApplication.Models
+namespace EmployeeDircetoryMVCApplication.Models
 {
     public class Search
     {
-       public string? Keyword { get; set; }
+        public string? Keyword { get; set; }
         public string Alpha { get; set; }
-       public string ?FilterBy { get; set; }
+        public string? FilterBy { get; set; }
 
     }
     public enum Dropdown

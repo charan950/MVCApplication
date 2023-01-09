@@ -1,26 +1,26 @@
-﻿namespace MVCApplication.Models
+﻿namespace EmployeeDircetoryMVCApplication.Models
 {
     public class Employee
     {
-       
+
         public int Id { get; set; }
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public string Jobtitle { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string JobTitle { get; set; }
         public string Office { get; set; }
-        public string Department { get; set; }  
-        public string Phonenumber { get; set; }
+        public string Department { get; set; }
+        public string PhoneNumber { get; set; }
         public string Email { get; set; }
 
-        public Employee(int Id,string Firstname,string Lastname,string Jobtitle,string Office,string Department,string Phonenumber,string Email)
-        { 
+        public Employee(int Id, string? Firstname, string? Lastname, string? Jobtitle, string? Office, string? Department, string? Phonenumber, string? Email)
+        {
             this.Id = Id;
-            this.Firstname = Firstname;
-            this.Lastname= Lastname;
-            this.Jobtitle = Jobtitle;
+            FirstName = Firstname;
+            LastName = Lastname;
+            JobTitle = Jobtitle;
             this.Office = Office;
             this.Department = Department;
-            this.Phonenumber= Phonenumber;
+            PhoneNumber = Phonenumber;
             this.Email = Email;
         }
         public Employee()
@@ -48,5 +48,5 @@
         MD,
         Sales
     }
-    
+
 }

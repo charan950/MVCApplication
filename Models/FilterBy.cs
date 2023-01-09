@@ -1,11 +1,11 @@
-﻿namespace MVCApplication.Models
+﻿namespace EmployeeDircetoryMVCApplication.Models
 {
     public class FilterBy
     {
         public string name;
         public FilterBy()
         {
-            this.name = "";
+            name = "";
         }
     }
 }

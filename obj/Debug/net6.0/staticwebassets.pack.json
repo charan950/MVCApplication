@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MVCApplication.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MVCApplication.bundle.scp.css"
+      "Id": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EmployeeDircetoryMVCApplication.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EmployeeDircetoryMVCApplication.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\wwwroot\\Images\\profile.jpg",
@@ -253,20 +253,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MVCApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EmployeeDircetoryMVCApplication.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.MVCApplication.props",
-      "PackagePath": "build\\MVCApplication.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.EmployeeDircetoryMVCApplication.props",
+      "PackagePath": "build\\EmployeeDircetoryMVCApplication.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MVCApplication.props",
-      "PackagePath": "buildMultiTargeting\\MVCApplication.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.EmployeeDircetoryMVCApplication.props",
+      "PackagePath": "buildMultiTargeting\\EmployeeDircetoryMVCApplication.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.MVCApplication.props",
-      "PackagePath": "buildTransitive\\MVCApplication.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.EmployeeDircetoryMVCApplication.props",
+      "PackagePath": "buildTransitive\\EmployeeDircetoryMVCApplication.props"
     }
   ],
   "ElementsToRemove": []

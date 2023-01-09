@@ -1,4 +1,4 @@
-﻿@model List<MVCApplication.Models.Employee>
+﻿@model List<Employee>
 <div class="row">
     @{
         foreach (var employee in Model)
@@ -10,8 +10,8 @@
                        <img src="@Url.Content("~/Images/profile.jpg ")" class="w-100 p-0">
                     </div>
                     <div class="col-8">
-                         <div>@employee.Firstname @employee.Lastname</div>
-                         <div> @employee.Jobtitle</div>
+                         <div>@employee.FirstName @employee.LastName</div>
+                         <div> @employee.JobTitle</div>
                          <div>@employee.Department</div>
                     </div>
                 </div>

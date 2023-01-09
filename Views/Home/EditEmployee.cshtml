@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "EditEmployee";
 }
-@model MVCApplication.Models.Employee
+@model             Employee
 
 
 <div>
@@ -14,15 +14,15 @@
                 </tr>
                 <tr>
                 <td class="p-2">firstname</td>
-                <td><input type="text"  asp-for=Firstname value="@Model.Firstname" class="form-control"/></td>
+                <td><input type="text"  asp-for=FirstName value="@Model.FirstName" class="form-control"/></td>
                 </tr>
                 <tr>
                 <td class="p-2">Last Name</td>
-                <td><input type="text" asp-for=Lastname value="@Model.Lastname" class="form-control" /></td>
+                <td><input type="text" asp-for=LastName value="@Model.LastName" class="form-control" /></td>
                 </tr>
                 <tr>
                 <td class="p-2">Job Title</td>
-                <td><input type="text" asp-for=Jobtitle value="@Model.Jobtitle" class="form-control" /></td>
+                <td><input type="text" asp-for=JobTitle value="@Model.JobTitle" class="form-control" /></td>
                 </tr>
                 <tr>
                 <td class="p-2">Office</td>
@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                 <td class="p-2">Phone Number</td>
-                <td><input type="text" asp-for=Phonenumber value="@Model.Phonenumber" class="form-control" /></td>
+                <td><input type="text" asp-for=PhoneNumber value="@Model.PhoneNumber" class="form-control" /></td>
                 </tr>
                 <tr>
                 <td class="p-2">Email</td>

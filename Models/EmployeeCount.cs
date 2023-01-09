@@ -1,4 +1,4 @@
-﻿namespace MVCApplication.Models
+﻿namespace EmployeeDircetoryMVCApplication.Models
 {
     public class EmployeeCount
     {
@@ -7,7 +7,7 @@
         public int Md { get; set; }
         public int Sales { get; set; }
         public int Office { get; set; }
-      
+
         public int India { get; set; }
         public int Sharepoint { get; set; }
 
@@ -27,8 +27,8 @@
             Md = md;
             Sales = sales;
             Office = office;
-            this.India = india;
-            this.Sharepoint = sharepoint;
+            India = india;
+            Sharepoint = sharepoint;
             Dotnet = dotnet;
             RecruitingExpert = recruitingExpert;
             BIDevelopers = bIDevelopers;

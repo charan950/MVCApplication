@@ -1,4 +1,4 @@
-namespace MVCApplication.Models
+namespace EmployeeDircetoryMVCApplication.Models
 {
     public class ErrorViewModel
     {

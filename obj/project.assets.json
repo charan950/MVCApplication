@@ -9348,9 +9348,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\MVCApplication.csproj",
-      "projectName": "MVCApplication",
-      "projectPath": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\MVCApplication.csproj",
+      "projectUniqueName": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\EmployeeDircetoryMVCApplication.csproj",
+      "projectName": "EmployeeDircetoryMVCApplication",
+      "projectPath": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\EmployeeDircetoryMVCApplication.csproj",
       "packagesPath": "C:\\Users\\charan.r\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\charan.r\\Downloads\\MVCApplication\\MVCApplication\\MVCApplication\\obj\\",
       "projectStyle": "PackageReference",

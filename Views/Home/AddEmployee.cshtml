@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "AddEmployee";
 }
-@model MVCApplication.Models.Employee
+@model EmployeeDircetoryMVCApplication.Models.Employee
 <div>
     @using(Html.BeginForm("AddEmployee","Home",FormMethod.Post)){
         <table>
@@ -11,16 +11,16 @@
             </tr>
             <tr class="m-5 p-3">
                 <td class="p-3">firstname</td>
-                <td>@Html.TextBoxFor(m=>m.Firstname ,new { @class = "form-control" })</td>
+                <td>@Html.TextBoxFor(m=>m.FirstName ,new { @class = "form-control" })</td>
             </tr>
             <tr>
                 <td class="p-3">Last Name</td>
-                <td>@Html.TextBoxFor(m=>m.Lastname,new { @class = "form-control" })</td>
+                <td>@Html.TextBoxFor(m=>m.LastName,new { @class = "form-control" })</td>
             </tr>
             <tr>
                 <td class="p-3">Job Title</td>
                 <td>
-                    @Html.DropDownListFor(m => m.Jobtitle,
+                    @Html.DropDownListFor(m => m.JobTitle,
                 new SelectList(Enum.GetValues(typeof(JobList))),
                 "Select Job Title",new { @class="form-select" })
                 </td>
@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td class="p-3">Phone Number</td>
-                <td>@Html.TextBoxFor(m=>m.Phonenumber,new { @class = "form-control" })</td>
+                <td>@Html.TextBoxFor(m=>m.PhoneNumber,new { @class = "form-control" })</td>
             </tr>
             <tr>
                 <td class="p-3">Email</td>

@@ -1,35 +1,32 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MVCApplication.Models;
-using MVCApplication.Providers;
-using System.Diagnostics;
+﻿using EmployeeDircetoryMVCApplication.Models;
+using EmployeeDircetoryMVCApplication.Providers;
+using Microsoft.AspNetCore.Mvc;
+using EmployeeDircetoryMVCApplication.Models;
+using System.Collections.Generic;
 using System.Text.Json;
-using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
-namespace MVCApplication.Controllers
+namespace EmployeeDircetoryMVCApplication.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        EmployeeProvider _employeeprovider=new EmployeeProvider();
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        EmployeeProvider EmployeeProvider= new EmployeeProvider();
+        public HomeController() { }
+
         [HttpGet]
         public IActionResult Index()
         {
-           List<Employee> list=LoadEmployees();
+            List<Employee> list = LoadEmployees();
             return View(list);
         }
         private List<Employee> LoadEmployees()
         {
             ViewBag.Search = new Search();
-            List<Employee> employees = new List<Employee>();
-            ViewBag.Employeecount = _employeeprovider.GetCount();
+            List<Employee>? employees = new List<Employee>();
+            ViewBag.Employeecount = EmployeeProvider.GetCount();
             if (TempData["employees"] == null)
             {
-                employees= _employeeprovider.GetEmployees();
-                ViewBag.Employees = _employeeprovider.GetEmployees();
+                employees = EmployeeProvider.GetEmployees();
+                ViewBag.Employees = EmployeeProvider.GetEmployees();
             }
             else
             {
@@ -51,20 +48,20 @@ namespace MVCApplication.Controllers
         [HttpPost]
         public IActionResult AddEmployee(Employee emp)
         {
-            Employee employee = new Employee(emp.Id, emp.Firstname, emp.Lastname, emp.Jobtitle, emp.Office, emp.Department, emp.Phonenumber, emp.Email);
-            _employeeprovider.AddEmployee(employee);
+            Employee employee = new Employee(emp.Id, emp.FirstName, emp.LastName, emp.JobTitle, emp.Office, emp.Department, emp.PhoneNumber, emp.Email);
+            EmployeeProvider.AddEmployee(employee);
             return RedirectToAction("");
         }
         public IActionResult EditEmployee(int id)
         {
             LoadEmployees();
-            List<Employee> employees = _employeeprovider.GetEmployees();
+            List<Employee> employees = EmployeeProvider.GetEmployees();
             Employee emp = new Employee();
             foreach (Employee employee in employees)
             {
                 if (employee.Id == id)
                 {
-                    emp= employee;
+                    emp = employee;
                 }
             }
             return View(emp);
@@ -72,8 +69,8 @@ namespace MVCApplication.Controllers
         [HttpPost]
         public IActionResult EditEmployee(Employee emp)
         {
-            Employee edit = new Employee(emp.Id,emp.Firstname, emp.Lastname, emp.Jobtitle, emp.Office, emp.Department, emp.Phonenumber, emp.Email);
-            _employeeprovider.EditEmployee(edit);
+            Employee edit = new Employee(emp.Id, emp.FirstName, emp.LastName, emp.JobTitle, emp.Office, emp.Department, emp.PhoneNumber, emp.Email);
+            EmployeeProvider.EditEmployee(edit);
             return RedirectToAction("");
         }
         [HttpPost]
@@ -92,10 +89,10 @@ namespace MVCApplication.Controllers
             }
 
             string filterby = value;
-            TempData["employees"] = JsonSerializer.Serialize(_employeeprovider.Search(keyword, filterby));
+            TempData["employees"] = JsonSerializer.Serialize(EmployeeProvider.Search(keyword, filterby));
             TempData["value"] = value;
             return RedirectToAction("Index", "Home");
         }
-        
+
     }
 }
