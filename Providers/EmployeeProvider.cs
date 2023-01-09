@@ -1,4 +1,5 @@
-﻿using EmployeeDircetoryMVCApplication.Models;
+﻿using EmployeeDircetoryMVCApplication.Interfaces;
+using EmployeeDircetoryMVCApplication.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data;
 using System.Data.SqlClient;
@@ -6,7 +7,7 @@ using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace EmployeeDircetoryMVCApplication.Providers
 {
-    public class EmployeeProvider : PageModel
+    public class EmployeeProvider : IEmployeeProvider
     {
         static string connectionstring = "data source =.; Initial Catalog = Employees; Integrated Security = SSPI;";
         public string SidebarValue = "";

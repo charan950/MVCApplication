@@ -4,13 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 using EmployeeDircetoryMVCApplication.Models;
 using System.Collections.Generic;
 using System.Text.Json;
+using EmployeeDircetoryMVCApplication.Interfaces;
 
 namespace EmployeeDircetoryMVCApplication.Controllers
 {
     public class HomeController : Controller
     {
-        EmployeeProvider EmployeeProvider= new EmployeeProvider();
-        public HomeController() { }
+        private readonly IEmployeeProvider EmployeeProvider;
+        public HomeController(IEmployeeProvider employeeProvider) {
+            EmployeeProvider= employeeProvider;
+        }
 
         [HttpGet]
         public IActionResult Index()
